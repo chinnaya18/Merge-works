@@ -1,0 +1,208 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+header {
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  color: black;
+  font-size: 14px;
+}
+
+header a {
+  color: skyblue;
+  text-decoration: none;
+  font-weight: bold;
+}
+header a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  flex: 1;
+  background: radial-gradient(circle at top, darkslateblue, black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+
+.left .text {
+  max-width: 350px;
+}
+
+.see-more {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  background: dimgray;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.see-more:hover {
+  background: gray;
+}
+
+.details {
+  display: none;
+  margin-top: 15px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.details ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.right {
+  flex: 1;
+  background-color: whitesmoke;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px lightgray;
+  width: 350px;
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.google-btn,
+.apple-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  background-color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.google-btn:hover,
+.apple-btn:hover {
+  background-color: whitesmoke;
+}
+
+.divider {
+  text-align: center;
+  color: gray;
+  margin: 15px 0;
+  position: relative;
+}
+.divider::before, .divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: lightgray;
+}
+.divider::before { left: 0; }
+.divider::after { right: 0; }
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid lightgray;
+}
+
+small {
+  font-size: 12px;
+  color: gray;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  font-size: 14px;
+  gap: 10px;
+}
+
+.checkbox-row input {
+  width: 18px;
+  height: 18px;
+}
+
+.create-btn {
+  width: 100%;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  display: inline-block;
+  text-align: center;
+}
+.create-btn:hover {
+  background: dimgray;
+}
+
+.terms {
+  font-size: 12px;
+  color: gray;
+  text-align: center;
+  margin-top: 10px;
+}
+.terms a {
+  color: blue;
+  text-decoration: none;
+}
+.terms a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+  .left, .right {
+    width: 100%;
+    min-height: 50vh;
+  }
+  .form {
+    width: 90%;
+    margin: 20px auto;
+  }
+}
