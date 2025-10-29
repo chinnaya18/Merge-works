@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome — Account created</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <p>Already have an account? <a href="firstpage.html">Sign in</a></p>
+  </header>
+
+  <div class="container">
+    <div class="left">
+      <div class="text">
+        <h1>Welcome</h1>
+        <p>Your account was created successfully. Start exploring your projects and repositories.</p>
+        <button class="see-more" id="toggleDetails2">See what's included ▼</button>
+        <div class="details" id="details2">
+          <ul>
+            <li>Private and public repositories</li>
+            <li>Project boards and task tracking</li>
+            <li>Collaborator access controls</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="form">
+        <h2>Account created</h2>
+        <p style="margin-top:10px;">You can go back to the start or sign in using Google or Apple.</p>
+
+        <button type="button" class="google-btn" id="googleLogin2">Continue with Google</button>
+        <button type="button" class="apple-btn" id="appleLogin2">Continue with Apple</button>
+
+        <div style="margin-top:15px; text-align:center;">
+          <a href="firstpage.html" class="create-btn" style="display:inline-block; text-decoration:none;">← Back to signup</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
