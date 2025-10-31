@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import logo from "logodraft.png";
+import logodraft from "./logodraft.png";
+
 const Welcome = () => {
   useEffect(() => {
     // Section reveal on scroll
@@ -69,9 +70,9 @@ const Welcome = () => {
       {/* Navbar */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-secondary sticky-top shadow-sm z-3">
         <div className="container">
-          <a className="navbar-brand fw-bold d-flex align-items-center" href="#">
+          <a className="navbar-brand fw-bold d-flex align-items-center" href="#!">
             <img
-              src={logo} alt="MergeWorks logo" width="120" height="120" 
+              src={logodraft} 
               alt="Logo"
               width="40"
               height="40"
