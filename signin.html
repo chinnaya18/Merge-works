@@ -1,0 +1,313 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign In</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a href="#">Need Help?</a>
+  </header>
+
+  <div class="container">
+    <div class="left">
+      <div class="text">
+        <h1>Welcome Back!</h1>
+        <p>Sign in to continue accessing your personalized dashboard and features.</p>
+        <button class="see-more" onclick="toggleDetails()">Learn More</button>
+        <div class="details" id="details">
+          <ul>
+            <li>Access your saved preferences</li>
+            <li>View your activity and history</li>
+            <li>Track your orders easily</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <form class="form">
+        <h2>Sign In</h2>
+
+        <button type="button" class="google-btn">Sign in with Google</button>
+        <button type="button" class="apple-btn">Sign in with Apple</button>
+
+        <div class="divider">or</div>
+
+        <label for="email">Email or Username</label>
+        <input type="text" id="email" placeholder="Enter your email or username" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <div class="forgot">
+          <a href="#">Forgot Password?</a>
+        </div>
+
+        <button type="submit" class="create-btn">Sign In</button>
+
+        <p class="terms">Don’t have an account? <a href="#">Sign up here</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function toggleDetails() {
+      const details = document.getElementById("details");
+      details.style.display = details.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign In</title>
+  <style>
+    /* 🌙 Base Style */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      overflow: hidden;
+      position: relative;
+      scroll-behavior: smooth;
+    }
+
+    /* ✨ Animated background bubbles */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(188, 212, 242, 0.15);
+      animation: float 12s infinite ease-in-out;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+      }
+      50% {
+        transform: translateY(-40px) scale(1.2);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.6;
+      }
+    }
+
+    /* 🧭 Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #161b22;
+      padding: 15px 40px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #f0f6fc;
+    }
+
+    nav a {
+      color: #c9d1d9;
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 1em;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #58a6ff;
+    }
+
+    /* 🪄 Center form section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 80vh;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .form-box {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 10px;
+      padding: 40px;
+      width: 320px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .form-box h2 {
+      margin-bottom: 25px;
+      color: #f0f6fc;
+    }
+
+    label {
+      display: block;
+      text-align: left;
+      font-size: 0.9em;
+      margin-top: 15px;
+      color: #c9d1d9;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      background-color: #0d1117;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      color: #f0f6fc;
+      font-size: 0.95em;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #58a6ff;
+    }
+
+    .forgot {
+      text-align: right;
+      margin-top: 8px;
+    }
+
+    .forgot a {
+      color: #58a6ff;
+      text-decoration: none;
+      font-size: 0.85em;
+    }
+
+    .forgot a:hover {
+      text-decoration: underline;
+    }
+
+    .signin-btn {
+      width: 100%;
+      background-color: #238636;
+      border: none;
+      color: white;
+      padding: 12px;
+      font-size: 1em;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 25px;
+      transition: background-color 0.3s;
+    }
+
+    .signin-btn:hover {
+      background-color: #2ea043;
+    }
+
+    .create-account {
+      margin-top: 20px;
+      font-size: 0.9em;
+      color: #8b949e;
+    }
+
+    .create-account a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    .create-account a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      font-size: 0.85em;
+      color: #8b949e;
+      background-color: #161b22;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- ✨ Floating Background Circles -->
+  <div class="background" id="background"></div>
+
+  <!-- 🧭 Header -->
+  <header>
+    <div class="logo">MergeWorks</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Help</a>
+    </nav>
+  </header>
+
+  <!-- 🌙 Hero Section -->
+  <section class="hero">
+    <div class="form-box">
+      <h2>Sign In</h2>
+      <form>
+        <label for="username">Username or Email</label>
+        <input type="text" id="username" placeholder="Enter your email" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+
+        <div class="forgot">
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="signin-btn">Sign In</button>
+
+        <div class="create-account">
+          New to MergeWorks? <a href="firstpage.html">Create an account</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- 🌌 Footer -->
+  <footer>
+    &copy; 2025 MergeWorks. All rights reserved.
+  </footer>
+
+  <!-- 💫 Floating Animation Script -->
+  <script>
+    const bg = document.getElementById("background");
+    for (let i = 0; i < 20; i++) {
+      const circle = document.createElement("div");
+      const size = Math.random() * 120 + 30;
+      circle.classList.add("circle");
+      circle.style.width = `${size}px`;
+      circle.style.height = `${size}px`;
+      circle.style.top = `${Math.random() * 100}%`;
+      circle.style.left = `${Math.random() * 100}%`;
+      circle.style.animationDelay = `${Math.random() * 10}s`;
+      bg.appendChild(circle);
+    }
+  </script>
+</body>
+</html>
