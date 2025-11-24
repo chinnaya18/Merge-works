@@ -131,6 +131,21 @@
       position: relative;
       color: #7d8590;
     }
+
+    df-messenger .df-messenger-wrapper {
+    bottom: auto !important;
+    top: 80px !important;         /* Chat window position */
+    right: 20px !important;
+  }
+    df-messenger {
+      --df-messenger-bot-message: #292b3a;
+      --df-messenger-button-titlebar-color: #6c5ce7;
+      --df-messenger-button-titlebar-font-color: white;
+      --df-messenger-chat-background-color: #1a1b26;
+      --df-messenger-font-color: white;
+      --df-messenger-send-icon: #6c5ce7;
+  }
+  
   </style>
 </head>
 
@@ -276,6 +291,13 @@
       if (valid) window.location.href = "welcome.html";
     });
   </script>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 
+<df-messenger
+  intent="WELCOME"
+  chat-title="Student Helper Bot"
+  agent-id="YOUR_AGENT_ID"
+  language-code="en">
+</df-messenger>
 </body>
 </html>

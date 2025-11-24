@@ -96,6 +96,22 @@
       color: #8b949e;
       font-size: 0.85em;
     }
+    
+
+  df-messenger .df-messenger-wrapper {
+    bottom: auto !important;
+    top: 80px !important;         /* Chat window position */
+    right: 20px !important;
+  }
+    df-messenger {
+      --df-messenger-bot-message: #292b3a;
+      --df-messenger-button-titlebar-color: #6c5ce7;
+      --df-messenger-button-titlebar-font-color: white;
+      --df-messenger-chat-background-color: #1a1b26;
+      --df-messenger-font-color: white;
+      --df-messenger-send-icon: #6c5ce7;
+  }
+  
   </style>
 </head>
 
@@ -108,7 +124,8 @@
     <h3 class="text-light m-0 fw-bold">CodeAmigos</h3>
     <nav>
       <a href="welcome.html" class="text-decoration-none text-light me-4" style="font-size: 1rem;">Home</a>
-      <a href="#" class="text-decoration-none text-primary" style="font-size: 1rem;">Help</a>
+      <!-- <a href="helpchat.html" class="text-decoration-none text-primary" style="font-size: 1rem;">Help</a> -->
+
     </nav>
   </header>
 
@@ -219,5 +236,13 @@ document.getElementById("signinForm").addEventListener("submit", async function(
   }
 });
 </script>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+<df-messenger
+  intent="WELCOME"
+  chat-title="Student Helper Bot"
+  agent-id="YOUR_AGENT_ID"
+  language-code="en">
+</df-messenger>
 </body>
 </html>
