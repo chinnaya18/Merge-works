@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeAmigos</title>
+<link rel="icon" type="image/png" href="C:\Users\D E L L\OneDrive\Desktop\mergeworks\logo\logodraft.png">
+
+  <!-- Remix Icons (for cute icons) -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(180deg, #0b0f15, #0f1621);
+    color: #d6e2f0;
+  }
+
+  /* Smooth float animation */
+  @keyframes floaty {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 45px;
+    background: rgba(255,255,255,0.03);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    backdrop-filter: blur(12px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .logo {
+    font-size: 1.7rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo img {
+    width: 47px;
+    height: 47px;
+    border-radius: 12px;
+    animation: floaty 3s infinite ease-in-out;
+  }
+
+  nav a {
+    color: #d6e2f0;
+    margin-left: 28px;
+    font-size: 1.05rem;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    color: #77b8ff;
+    border-bottom: 2px solid #77b8ff;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 100px 30px;
+  }
+
+  .hero img {
+    width: 330px;
+    margin-bottom: 20px;
+    animation: floaty 4.5s infinite ease-in-out;
+  }
+
+  .hero h1 {
+    font-size: 2.9rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #eef4ff;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    color: #9db4c8;
+    max-width: 600px;
+    margin: 0 auto 30px;
+  }
+
+  .hero button {
+    padding: 14px 30px;
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 0 18px rgba(74,144,226,0.25);
+    transition: 0.3s;
+  }
+
+  .hero button:hover {
+    background: #5aa0f8;
+    transform: translateY(-3px);
+  }
+
+  .section {
+    width: 85%;
+    margin: 70px auto;
+    padding: 40px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.06);
+    backdrop-filter: blur(8px);
+    text-align: center;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #eef4ff;
+  }
+
+  .section p {
+    font-size: 1.1rem;
+    color: #9db4c8;
+    margin-bottom: 25px;
+  }
+
+  /* Cute icon cards */
+  .features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+  }
+
+  .feature-card {
+    width: 250px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 20px;
+    padding: 25px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.4s;
+  }
+
+  .feature-card i {
+    font-size: 40px;
+    color: #77b8ff;
+    margin-bottom: 12px;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px rgba(80,140,255,0.2);
+  }
+
+  footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 60px;
+    font-size: 0.9rem;
+    color: #8aa0b6;
+    background: rgba(255,255,255,0.03);
+  }
+ .hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.hero-bg img {
+  position: absolute;
+  width: 180px;
+  opacity: 0.4;
+  animation: floaty 6s infinite ease-in-out;
+}
+
+.img1 {
+  top: 15%;
+  left: 10%;
+}
+
+.img2 {
+  top: 20%;
+  right: 12%;
+  animation-delay: 2s;
+}
+
+.img3 {
+  bottom: 10%;
+  left: 40%;
+  animation-delay: 4s;
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="C:\Users\D E L L\OneDrive\Desktop\mergeworks\logo\logodraft.png">
+    CodeAmigos
+  </div>
+
+  <nav>
+    <a href="#explore">Explore</a>
+    <a href="#features">Features</a>
+    <a href="signin.html">Login</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <section class="hero">
+
+  <!-- Floating background images behind the text -->
+  <div class="hero-bg"><br><br>
+    <img src="https://cdn-icons-png.flaticon.com/512/2721/2721266.png" class="img1">
+    <img src="https://cdn-icons-png.flaticon.com/512/906/906361.png" class="img2"><br>
+    <br><img src="https://cdn-icons-png.flaticon.com/512/1006/1006369.png" class="img3">
+  </div>
+
+  <img src="C:\Users\D E L L\OneDrive\Desktop\mergeworks\logo\logodraft.png">
+  <h1>Welcome to CodeAmigos</h1>
+  <p>The friendliest place to learn coding, collaborate, and build amazing things together.</p>
+
+  <button class="btn" onclick="window.location.href='signup.html'">Get Started</button>
+
+
+
+</section>
+
+</section>
+
+<section id="explore" class="section">
+  <h2><i class="ri-compass-3-line"></i> Explore</h2>
+  <p>Browse tutorials, open-source projects, and coding guides specially made for beginners.</p>
+</section>
+
+<section id="features" class="section">
+  <h2><i class="ri-star-smile-line"></i> Features</h2>
+  <p>Everything you need to learn and grow.</p>
+
+  <div class="features-grid">
+    <div class="feature-card">
+      <i class="ri-team-line"></i>
+      <h3>Collaboration</h3>
+      <p>Learn and code together with your amigos.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="ri-code-box-line"></i>
+      <h3>Clean Projects</h3>
+      <p>Easy project structure designed for beginners.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="ri-graduation-cap-line"></i>
+      <h3>Learn Fast</h3>
+      <p>Simple explanations and step-by-step guides.</p>
+    </div>
+
+    <div class="feature-card">
+      <i class="ri-device-line"></i>
+      <h3>Responsive</h3>
+      <p>Looks beautiful on all screens.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 CodeAmigos — A friendly place for learners ❤️
+</footer>
+
+</body>
+</html>
